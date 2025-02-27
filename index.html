@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>пicтрун</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        img {
+            cursor: pointer;
+            width: 200px; /* Размер кнопки */
+            height: 200px;
+            border-radius: 50%; /* Делаем круглой */
+            object-fit: cover; /* Чтобы картинка не искажалась */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для красоты */
+            transition: transform 0.2s ease-in-out;
+        }
+        img:active {
+            transform: scale(0.9); /* Эффект нажатия */
+        }
+    </style>
+</head>
+<body>
+    <img src="image.jpg" id="playButton" alt="Нажми на меня">
+    <audio id="sound" src="sound.mp3"></audio>
+
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            document.getElementById("sound").play();
+        });
+    </script>
+</body>
+</html>
